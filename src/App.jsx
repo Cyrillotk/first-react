@@ -57,6 +57,8 @@ import './App.css'
 // }
 
 // export default App
+
+
 //displaying 
 // const user = {
 //   name: 'TCK',
@@ -80,6 +82,8 @@ import './App.css'
 //     </>
 //   );
 // }
+
+
 //rendering list
 // const products = [
 //   { title: 'Cabbage', isFruit: false, id: 1 },
@@ -103,6 +107,8 @@ import './App.css'
 //     <ul>{listItems}</ul>
 //   );
 // }
+
+
 // responding to events
 // function MyButton() {
 //   function handleClick() {
@@ -116,6 +122,8 @@ import './App.css'
 //   );
 // }
 // export default MyButton;
+
+//updating screen
 // function MyButton() {
 //   const [count, setCount] = useState(0);
 
@@ -130,3 +138,30 @@ import './App.css'
 //   );
 // }
 // export default MyButton;
+
+//using hooks
+import { useState } from 'react';
+
+export default function MyApp() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <h1>Counters that update together</h1>
+      <MyButton count={count} onClick={handleClick} />
+      <MyButton count={count} onClick={handleClick} />
+    </div>
+  );
+}
+
+function MyButton({ count, onClick }) {
+  return (
+    <button onClick={onClick}>
+      Clicked {count} times
+    </button>
+  );
+}
