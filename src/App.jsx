@@ -3,12 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function myButton(){
+function MyButton(){
   return (
     <button>im a button</button>
   );
 } 
-export default myButton;
+// export default myButton;
 export default function MyApp(){
   return(
     <div>
